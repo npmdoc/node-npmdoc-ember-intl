@@ -1,0 +1,1385 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/ember-intl/ember-intl">ember-intl (v2.27.0)</a>
+</h1>
+<h4>Ember toolbox for internationalization.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-intl">module ember-intl</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">ember-intl.</span>isLocalizationFramework</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.contentFor">
+            function <span class="apidocSignatureSpan">ember-intl.</span>contentFor
+            <span class="apidocSignatureSpan">(name, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.findIntlAddons">
+            function <span class="apidocSignatureSpan">ember-intl.</span>findIntlAddons
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.findLocales">
+            function <span class="apidocSignatureSpan">ember-intl.</span>findLocales
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.included">
+            function <span class="apidocSignatureSpan">ember-intl.</span>included
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.intlConfig">
+            function <span class="apidocSignatureSpan">ember-intl.</span>intlConfig
+            <span class="apidocSignatureSpan">(environment)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.log">
+            function <span class="apidocSignatureSpan">ember-intl.</span>log
+            <span class="apidocSignatureSpan">(msg, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.mergeTranslationTrees">
+            function <span class="apidocSignatureSpan">ember-intl.</span>mergeTranslationTrees
+            <span class="apidocSignatureSpan">(projectTranslations, addonTranslations)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.outputPaths">
+            function <span class="apidocSignatureSpan">ember-intl.</span>outputPaths
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.readConfig">
+            function <span class="apidocSignatureSpan">ember-intl.</span>readConfig
+            <span class="apidocSignatureSpan">(environment)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.reduceTranslations">
+            function <span class="apidocSignatureSpan">ember-intl.</span>reduceTranslations
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.treeForApp">
+            function <span class="apidocSignatureSpan">ember-intl.</span>treeForApp
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.treeForPublic">
+            function <span class="apidocSignatureSpan">ember-intl.</span>treeForPublic
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-intl.</span>addonOptions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-intl.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-intl.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-intl.index">module ember-intl.index</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">ember-intl.index.</span>isLocalizationFramework</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.contentFor">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>contentFor
+            <span class="apidocSignatureSpan">(name, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.findIntlAddons">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>findIntlAddons
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.findLocales">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>findLocales
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.included">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>included
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.intlConfig">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>intlConfig
+            <span class="apidocSignatureSpan">(environment)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.log">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>log
+            <span class="apidocSignatureSpan">(msg, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.mergeTranslationTrees">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>mergeTranslationTrees
+            <span class="apidocSignatureSpan">(projectTranslations, addonTranslations)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.outputPaths">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>outputPaths
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.readConfig">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>readConfig
+            <span class="apidocSignatureSpan">(environment)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.reduceTranslations">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>reduceTranslations
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.treeForApp">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>treeForApp
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-intl.index.treeForPublic">
+            function <span class="apidocSignatureSpan">ember-intl.index.</span>treeForPublic
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-intl.index.</span>addonOptions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-intl.index.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-intl" id="apidoc.module.ember-intl">module ember-intl</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.contentFor" id="apidoc.element.ember-intl.contentFor">
+        function <span class="apidocSignatureSpan">ember-intl.</span>contentFor
+        <span class="apidocSignatureSpan">(name, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contentFor(name, config) {
+  if (name === 'head' &amp;&amp; !this.addonOptions.disablePolyfill &amp;&amp; this.addonOptions.autoPolyfill) {
+    let assetPath = this.outputPaths();
+    let locales = this.findLocales();
+    let prefix = '';
+
+    if (config.rootURL) { prefix += config.rootURL; }
+    if (assetPath) { prefix += assetPath; }
+
+    let localeScripts = locales.map(function(locale) {
+      return `&lt;script src="${prefix}/locales/${locale}.js"&gt;&lt;/script&gt;`;
+    });
+
+    return [`&lt;script src="${prefix}/intl.min.js"&gt;&lt;/script&gt;`]
+      .concat(localeScripts)
+      .join('\n');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.findIntlAddons" id="apidoc.element.ember-intl.findIntlAddons">
+        function <span class="apidocSignatureSpan">ember-intl.</span>findIntlAddons
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findIntlAddons() {
+  let projectName = this.app.project.name();
+  let addons = this.app.project.addons;
+  let registered = new Set();
+
+  let find = function(list, addon) {
+    // Only handle each addon once
+    if (registered.has(addon.name)) {
+      return list;
+    }
+
+    let translationPath = addon.pkg['ember-addon'].translationPath || 'translations';
+
+    if (projectName !== addon.name &amp;&amp; existsSync(path.join(addon.root, translationPath))) {
+      list.push({
+        name: addon.name,
+        translationPath: translationPath,
+        path: addon.root
+      });
+
+      registered.add(addon.name);
+    }
+
+    // Recursively load all child addons
+    return addon.addons.reduce(find, list);
+  };
+
+  return addons.reduce(find, []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+let inputPath = this.addonOptions.inputPath || 'translations';
+this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+this.projectLocales = this.findLocales();
+
+let projectTranslations = new WatchedDir(inputPath);
+
+let addonTranslations = this.<span class="apidocCodeKeywordSpan">findIntlAddons</span>().map(function(addon) {
+  return funnel(addon.path, {
+    srcDir: addon.translationPath,
+    destDir: `__addon__${addon.name}`
+  });
+}, this);
+
+this.translationTree = this.mergeTranslationTrees(projectTranslations, addonTranslations);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.findLocales" id="apidoc.element.ember-intl.findLocales">
+        function <span class="apidocSignatureSpan">ember-intl.</span>findLocales
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findLocales() {
+  let locales = [];
+
+  if (this.hasTranslationDir) {
+    locales = locales.concat(walkSync(path.join(this.app.project.root, this.addonOptions.inputPath), {
+      directories: false
+    }).map(function(filename) {
+      return path.basename(filename, path.extname(filename)).toLowerCase().replace(/_/g, '-');
+    }));
+  }
+
+  if (this.addonOptions.locales) {
+    locales = locales.concat(this.addonOptions.locales);
+  }
+
+  locales = locales.concat(locales.filter(function(locale) {
+    if (utils.isSupportedLocale(locale)) {
+      return true;
+    }
+
+    this.log(`'${locale}' is not a valid locale name`);
+
+    return false;
+  }, this));
+
+  return utils.unique(locales);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._super.included.apply(this, arguments);
+
+let app = this.app = this._findHost();
+this.addonOptions = this.intlConfig(app.env);
+
+let inputPath = this.addonOptions.inputPath || 'translations';
+this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+this.projectLocales = this.<span class="apidocCodeKeywordSpan">findLocales</span>();
+
+let projectTranslations = new WatchedDir(inputPath);
+
+let addonTranslations = this.findIntlAddons().map(function(addon) {
+  return funnel(addon.path, {
+    srcDir: addon.translationPath,
+    destDir: `__addon__${addon.name}`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.included" id="apidoc.element.ember-intl.included">
+        function <span class="apidocSignatureSpan">ember-intl.</span>included
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included() {
+  this._super.included.apply(this, arguments);
+
+  let app = this.app = this._findHost();
+  this.addonOptions = this.intlConfig(app.env);
+
+  let inputPath = this.addonOptions.inputPath || 'translations';
+  this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+  this.projectLocales = this.findLocales();
+
+  let projectTranslations = new WatchedDir(inputPath);
+
+  let addonTranslations = this.findIntlAddons().map(function(addon) {
+    return funnel(addon.path, {
+      srcDir: addon.translationPath,
+      destDir: `__addon__${addon.name}`
+    });
+  }, this);
+
+  this.translationTree = this.mergeTranslationTrees(projectTranslations, addonTranslations);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.intlConfig" id="apidoc.element.ember-intl.intlConfig">
+        function <span class="apidocSignatureSpan">ember-intl.</span>intlConfig
+        <span class="apidocSignatureSpan">(environment)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">intlConfig(environment) {
+  let deprecatedConfig = this.app.project.config(environment)['intl'];
+  let addonConfig = Object.assign(this.readConfig(environment), deprecatedConfig || {});
+
+  if (deprecatedConfig) {
+    this.log('DEPRECATION: intl configuration should be moved into config/ember-intl.js');
+    this.log('Run `ember g ember-intl-config` to create a default config');
+  }
+
+  if (addonConfig.defaultLocale) {
+    this.log('DEPRECATION: defaultLocale is deprecated in favor of baseLocale');
+    this.log('Please update config/ember-intl.js or config/environment.js');
+    addonConfig.baseLocale = addonConfig.defaultLocale;
+  }
+
+  addonConfig = Object.assign({
+    locales: null,
+    baseLocale: null,
+    publicOnly: false,
+    disablePolyfill: false,
+    autoPolyfill: false,
+    inputPath: 'translations',
+    outputPath: 'translations'
+  }, addonConfig);
+
+  if (addonConfig.locales) {
+    addonConfig.locales = utils.castArray(addonConfig.locales).filter(function(locale) {
+      return typeof locale === 'string';
+    }).map(function(locale) {
+      return locale.toLocaleLowerCase();
+    });
+  }
+
+  return addonConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  addonOptions: null,
+  isLocalizationFramework: true,
+
+  included() {
+this._super.included.apply(this, arguments);
+
+let app = this.app = this._findHost();
+this.addonOptions = this.<span class="apidocCodeKeywordSpan">intlConfig</span>(app.env);
+
+let inputPath = this.addonOptions.inputPath || 'translations';
+this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+this.projectLocales = this.findLocales();
+
+let projectTranslations = new WatchedDir(inputPath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.log" id="apidoc.element.ember-intl.log">
+        function <span class="apidocSignatureSpan">ember-intl.</span>log
+        <span class="apidocSignatureSpan">(msg, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log(msg, options) {
+  if (this.app.options &amp;&amp; this.app.options.intl &amp;&amp; this.app.options.intl.silent) {
+    return;
+  }
+
+  if (options &amp;&amp; options.warning &amp;&amp; this.ui.writeWarnLine) {
+    this.ui.writeWarnLine(`[ember-intl] ${msg}`);
+  } else {
+    this.ui.writeLine(`[ember-intl] ${msg}`);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  },
+
+  intlConfig(environment) {
+let deprecatedConfig = this.app.project.config(environment)['intl'];
+let addonConfig = Object.assign(this.readConfig(environment), deprecatedConfig || {});
+
+if (deprecatedConfig) {
+  this.<span class="apidocCodeKeywordSpan">log</span>('DEPRECATION: intl configuration should be moved into config/ember-intl
+.js');
+  this.log('Run `ember g ember-intl-config` to create a default config');
+}
+
+if (addonConfig.defaultLocale) {
+  this.log('DEPRECATION: defaultLocale is deprecated in favor of baseLocale');
+  this.log('Please update config/ember-intl.js or config/environment.js');
+  addonConfig.baseLocale = addonConfig.defaultLocale;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.mergeTranslationTrees" id="apidoc.element.ember-intl.mergeTranslationTrees">
+        function <span class="apidocSignatureSpan">ember-intl.</span>mergeTranslationTrees
+        <span class="apidocSignatureSpan">(projectTranslations, addonTranslations)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeTranslationTrees(projectTranslations, addonTranslations) {
+  let trees = [];
+  trees.push(projectTranslations);
+
+  if (addonTranslations &amp;&amp; addonTranslations.length) {
+    trees = trees.concat(addonTranslations);
+  }
+
+  return funnel(mergeTrees(trees), {
+    include: ['**/*.yaml', '**/*.yml', '**/*.json']
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+let addonTranslations = this.findIntlAddons().map(function(addon) {
+  return funnel(addon.path, {
+    srcDir: addon.translationPath,
+    destDir: `__addon__${addon.name}`
+  });
+}, this);
+
+this.translationTree = this.<span class="apidocCodeKeywordSpan">mergeTranslationTrees</span>(projectTranslations, addonTranslations
+);
+  },
+
+  outputPaths() {
+let assetPath = 'assets/intl';
+let appOptions = this.app.options;
+
+if (appOptions.app &amp;&amp; appOptions.app.intl) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.outputPaths" id="apidoc.element.ember-intl.outputPaths">
+        function <span class="apidocSignatureSpan">ember-intl.</span>outputPaths
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outputPaths() {
+  let assetPath = 'assets/intl';
+  let appOptions = this.app.options;
+
+  if (appOptions.app &amp;&amp; appOptions.app.intl) {
+    assetPath = appOptions.app.intl;
+  }
+
+  return assetPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    return assetPath;
+  },
+
+  contentFor(name, config) {
+    if (name === 'head' &amp;&amp; !this.addonOptions.disablePolyfill &amp;&amp; this.addonOptions.autoPolyfill) {
+let assetPath = this.<span class="apidocCodeKeywordSpan">outputPaths</span>();
+let locales = this.findLocales();
+let prefix = '';
+
+if (config.rootURL) { prefix += config.rootURL; }
+if (assetPath) { prefix += assetPath; }
+
+let localeScripts = locales.map(function(locale) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.readConfig" id="apidoc.element.ember-intl.readConfig">
+        function <span class="apidocSignatureSpan">ember-intl.</span>readConfig
+        <span class="apidocSignatureSpan">(environment)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readConfig(environment) {
+  let project = this.app.project;
+
+  // NOTE: For ember-cli &gt;= 2.6.0-beta.3, project.configPath() returns absolute path
+  // while older ember-cli versions return path relative to project root
+  let configPath = path.dirname(project.configPath());
+  let config = path.join(configPath, 'ember-intl.js');
+
+  if (!path.isAbsolute(config)) {
+    config = path.join(project.root, config);
+  }
+
+  if (existsSync(config)) {
+    return require(config)(environment);
+  }
+
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+return {};
+  },
+
+  intlConfig(environment) {
+let deprecatedConfig = this.app.project.config(environment)['intl'];
+let addonConfig = Object.assign(this.<span class="apidocCodeKeywordSpan">readConfig</span>(environment), deprecatedConfig || {});
+
+if (deprecatedConfig) {
+  this.log('DEPRECATION: intl configuration should be moved into config/ember-intl.js');
+  this.log('Run `ember g ember-intl-config` to create a default config');
+}
+
+if (addonConfig.defaultLocale) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.reduceTranslations" id="apidoc.element.ember-intl.reduceTranslations">
+        function <span class="apidocSignatureSpan">ember-intl.</span>reduceTranslations
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reduceTranslations(opts) {
+  if (!opts) { opts = {}; }
+  let addon = this;
+
+  return new TranslationReducer([this.translationTree], Object.assign({}, this.addonOptions, opts, {
+    verbose: !(this.app.options &amp;&amp; this.app.options.intl &amp;&amp; this.app.options.intl.silent),
+    log() {
+      return addon.log.apply(addon, arguments);
+    }
+  }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+  },
+
+  treeForApp(tree) {
+let trees = [tree];
+
+if (this.hasTranslationDir &amp;&amp; !this.addonOptions.publicOnly) {
+  trees.push(this.<span class="apidocCodeKeywordSpan">reduceTranslations</span>({
+    filename(key) {
+      return `${key}.js`;
+    },
+    wrapEntry(obj) {
+      return `export default ${stringify(obj)};`;
+    }
+  }));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.treeForApp" id="apidoc.element.ember-intl.treeForApp">
+        function <span class="apidocSignatureSpan">ember-intl.</span>treeForApp
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForApp(tree) {
+  let trees = [tree];
+
+  if (this.hasTranslationDir &amp;&amp; !this.addonOptions.publicOnly) {
+    trees.push(this.reduceTranslations({
+      filename(key) {
+        return `${key}.js`;
+      },
+      wrapEntry(obj) {
+        return `export default ${stringify(obj)};`;
+      }
+    }));
+  }
+
+  if (tree &amp;&amp; this.projectLocales.length) {
+    let cldrTree = extract(tree, {
+      locales: this.projectLocales,
+      relativeFields: true,
+      destDir: 'cldrs',
+      prelude: '/*jslint eqeq: true*/\n',
+      moduleType: 'es6'
+    });
+
+    trees.push(cldrTree);
+  }
+
+  return mergeTrees(trees, { overwrite: true });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.treeForPublic" id="apidoc.element.ember-intl.treeForPublic">
+        function <span class="apidocSignatureSpan">ember-intl.</span>treeForPublic
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForPublic() {
+  let publicTree = this._super.treeForPublic.apply(this, arguments);
+  let trees = [];
+
+  if (publicTree) {
+    trees.push(publicTree);
+  }
+
+  if (!this.addonOptions.disablePolyfill) {
+    let appOptions = this.app.options || {};
+
+    trees.push(require('./lib/broccoli/intl-polyfill')({
+      locales: this.projectLocales,
+      destDir: appOptions.app &amp;&amp; appOptions.app.intl || 'assets/intl'
+    }));
+  }
+
+  if (this.hasTranslationDir &amp;&amp; this.addonOptions.publicOnly) {
+    trees.push(this.reduceTranslations());
+  }
+
+  return mergeTrees(trees, { overwrite: true });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-intl.index" id="apidoc.module.ember-intl.index">module ember-intl.index</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.contentFor" id="apidoc.element.ember-intl.index.contentFor">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>contentFor
+        <span class="apidocSignatureSpan">(name, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contentFor(name, config) {
+  if (name === 'head' &amp;&amp; !this.addonOptions.disablePolyfill &amp;&amp; this.addonOptions.autoPolyfill) {
+    let assetPath = this.outputPaths();
+    let locales = this.findLocales();
+    let prefix = '';
+
+    if (config.rootURL) { prefix += config.rootURL; }
+    if (assetPath) { prefix += assetPath; }
+
+    let localeScripts = locales.map(function(locale) {
+      return `&lt;script src="${prefix}/locales/${locale}.js"&gt;&lt;/script&gt;`;
+    });
+
+    return [`&lt;script src="${prefix}/intl.min.js"&gt;&lt;/script&gt;`]
+      .concat(localeScripts)
+      .join('\n');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.findIntlAddons" id="apidoc.element.ember-intl.index.findIntlAddons">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>findIntlAddons
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findIntlAddons() {
+  let projectName = this.app.project.name();
+  let addons = this.app.project.addons;
+  let registered = new Set();
+
+  let find = function(list, addon) {
+    // Only handle each addon once
+    if (registered.has(addon.name)) {
+      return list;
+    }
+
+    let translationPath = addon.pkg['ember-addon'].translationPath || 'translations';
+
+    if (projectName !== addon.name &amp;&amp; existsSync(path.join(addon.root, translationPath))) {
+      list.push({
+        name: addon.name,
+        translationPath: translationPath,
+        path: addon.root
+      });
+
+      registered.add(addon.name);
+    }
+
+    // Recursively load all child addons
+    return addon.addons.reduce(find, list);
+  };
+
+  return addons.reduce(find, []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+let inputPath = this.addonOptions.inputPath || 'translations';
+this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+this.projectLocales = this.findLocales();
+
+let projectTranslations = new WatchedDir(inputPath);
+
+let addonTranslations = this.<span class="apidocCodeKeywordSpan">findIntlAddons</span>().map(function(addon) {
+  return funnel(addon.path, {
+    srcDir: addon.translationPath,
+    destDir: `__addon__${addon.name}`
+  });
+}, this);
+
+this.translationTree = this.mergeTranslationTrees(projectTranslations, addonTranslations);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.findLocales" id="apidoc.element.ember-intl.index.findLocales">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>findLocales
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findLocales() {
+  let locales = [];
+
+  if (this.hasTranslationDir) {
+    locales = locales.concat(walkSync(path.join(this.app.project.root, this.addonOptions.inputPath), {
+      directories: false
+    }).map(function(filename) {
+      return path.basename(filename, path.extname(filename)).toLowerCase().replace(/_/g, '-');
+    }));
+  }
+
+  if (this.addonOptions.locales) {
+    locales = locales.concat(this.addonOptions.locales);
+  }
+
+  locales = locales.concat(locales.filter(function(locale) {
+    if (utils.isSupportedLocale(locale)) {
+      return true;
+    }
+
+    this.log(`'${locale}' is not a valid locale name`);
+
+    return false;
+  }, this));
+
+  return utils.unique(locales);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._super.included.apply(this, arguments);
+
+let app = this.app = this._findHost();
+this.addonOptions = this.intlConfig(app.env);
+
+let inputPath = this.addonOptions.inputPath || 'translations';
+this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+this.projectLocales = this.<span class="apidocCodeKeywordSpan">findLocales</span>();
+
+let projectTranslations = new WatchedDir(inputPath);
+
+let addonTranslations = this.findIntlAddons().map(function(addon) {
+  return funnel(addon.path, {
+    srcDir: addon.translationPath,
+    destDir: `__addon__${addon.name}`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.included" id="apidoc.element.ember-intl.index.included">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>included
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included() {
+  this._super.included.apply(this, arguments);
+
+  let app = this.app = this._findHost();
+  this.addonOptions = this.intlConfig(app.env);
+
+  let inputPath = this.addonOptions.inputPath || 'translations';
+  this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+  this.projectLocales = this.findLocales();
+
+  let projectTranslations = new WatchedDir(inputPath);
+
+  let addonTranslations = this.findIntlAddons().map(function(addon) {
+    return funnel(addon.path, {
+      srcDir: addon.translationPath,
+      destDir: `__addon__${addon.name}`
+    });
+  }, this);
+
+  this.translationTree = this.mergeTranslationTrees(projectTranslations, addonTranslations);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.intlConfig" id="apidoc.element.ember-intl.index.intlConfig">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>intlConfig
+        <span class="apidocSignatureSpan">(environment)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">intlConfig(environment) {
+  let deprecatedConfig = this.app.project.config(environment)['intl'];
+  let addonConfig = Object.assign(this.readConfig(environment), deprecatedConfig || {});
+
+  if (deprecatedConfig) {
+    this.log('DEPRECATION: intl configuration should be moved into config/ember-intl.js');
+    this.log('Run `ember g ember-intl-config` to create a default config');
+  }
+
+  if (addonConfig.defaultLocale) {
+    this.log('DEPRECATION: defaultLocale is deprecated in favor of baseLocale');
+    this.log('Please update config/ember-intl.js or config/environment.js');
+    addonConfig.baseLocale = addonConfig.defaultLocale;
+  }
+
+  addonConfig = Object.assign({
+    locales: null,
+    baseLocale: null,
+    publicOnly: false,
+    disablePolyfill: false,
+    autoPolyfill: false,
+    inputPath: 'translations',
+    outputPath: 'translations'
+  }, addonConfig);
+
+  if (addonConfig.locales) {
+    addonConfig.locales = utils.castArray(addonConfig.locales).filter(function(locale) {
+      return typeof locale === 'string';
+    }).map(function(locale) {
+      return locale.toLocaleLowerCase();
+    });
+  }
+
+  return addonConfig;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  addonOptions: null,
+  isLocalizationFramework: true,
+
+  included() {
+this._super.included.apply(this, arguments);
+
+let app = this.app = this._findHost();
+this.addonOptions = this.<span class="apidocCodeKeywordSpan">intlConfig</span>(app.env);
+
+let inputPath = this.addonOptions.inputPath || 'translations';
+this.hasTranslationDir = existsSync(path.join(app.project.root, inputPath));
+this.projectLocales = this.findLocales();
+
+let projectTranslations = new WatchedDir(inputPath);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.log" id="apidoc.element.ember-intl.index.log">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>log
+        <span class="apidocSignatureSpan">(msg, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log(msg, options) {
+  if (this.app.options &amp;&amp; this.app.options.intl &amp;&amp; this.app.options.intl.silent) {
+    return;
+  }
+
+  if (options &amp;&amp; options.warning &amp;&amp; this.ui.writeWarnLine) {
+    this.ui.writeWarnLine(`[ember-intl] ${msg}`);
+  } else {
+    this.ui.writeLine(`[ember-intl] ${msg}`);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  },
+
+  intlConfig(environment) {
+let deprecatedConfig = this.app.project.config(environment)['intl'];
+let addonConfig = Object.assign(this.readConfig(environment), deprecatedConfig || {});
+
+if (deprecatedConfig) {
+  this.<span class="apidocCodeKeywordSpan">log</span>('DEPRECATION: intl configuration should be moved into config/ember-intl
+.js');
+  this.log('Run `ember g ember-intl-config` to create a default config');
+}
+
+if (addonConfig.defaultLocale) {
+  this.log('DEPRECATION: defaultLocale is deprecated in favor of baseLocale');
+  this.log('Please update config/ember-intl.js or config/environment.js');
+  addonConfig.baseLocale = addonConfig.defaultLocale;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.mergeTranslationTrees" id="apidoc.element.ember-intl.index.mergeTranslationTrees">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>mergeTranslationTrees
+        <span class="apidocSignatureSpan">(projectTranslations, addonTranslations)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeTranslationTrees(projectTranslations, addonTranslations) {
+  let trees = [];
+  trees.push(projectTranslations);
+
+  if (addonTranslations &amp;&amp; addonTranslations.length) {
+    trees = trees.concat(addonTranslations);
+  }
+
+  return funnel(mergeTrees(trees), {
+    include: ['**/*.yaml', '**/*.yml', '**/*.json']
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+let addonTranslations = this.findIntlAddons().map(function(addon) {
+  return funnel(addon.path, {
+    srcDir: addon.translationPath,
+    destDir: `__addon__${addon.name}`
+  });
+}, this);
+
+this.translationTree = this.<span class="apidocCodeKeywordSpan">mergeTranslationTrees</span>(projectTranslations, addonTranslations
+);
+  },
+
+  outputPaths() {
+let assetPath = 'assets/intl';
+let appOptions = this.app.options;
+
+if (appOptions.app &amp;&amp; appOptions.app.intl) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.outputPaths" id="apidoc.element.ember-intl.index.outputPaths">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>outputPaths
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">outputPaths() {
+  let assetPath = 'assets/intl';
+  let appOptions = this.app.options;
+
+  if (appOptions.app &amp;&amp; appOptions.app.intl) {
+    assetPath = appOptions.app.intl;
+  }
+
+  return assetPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    return assetPath;
+  },
+
+  contentFor(name, config) {
+    if (name === 'head' &amp;&amp; !this.addonOptions.disablePolyfill &amp;&amp; this.addonOptions.autoPolyfill) {
+let assetPath = this.<span class="apidocCodeKeywordSpan">outputPaths</span>();
+let locales = this.findLocales();
+let prefix = '';
+
+if (config.rootURL) { prefix += config.rootURL; }
+if (assetPath) { prefix += assetPath; }
+
+let localeScripts = locales.map(function(locale) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.readConfig" id="apidoc.element.ember-intl.index.readConfig">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>readConfig
+        <span class="apidocSignatureSpan">(environment)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readConfig(environment) {
+  let project = this.app.project;
+
+  // NOTE: For ember-cli &gt;= 2.6.0-beta.3, project.configPath() returns absolute path
+  // while older ember-cli versions return path relative to project root
+  let configPath = path.dirname(project.configPath());
+  let config = path.join(configPath, 'ember-intl.js');
+
+  if (!path.isAbsolute(config)) {
+    config = path.join(project.root, config);
+  }
+
+  if (existsSync(config)) {
+    return require(config)(environment);
+  }
+
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+return {};
+  },
+
+  intlConfig(environment) {
+let deprecatedConfig = this.app.project.config(environment)['intl'];
+let addonConfig = Object.assign(this.<span class="apidocCodeKeywordSpan">readConfig</span>(environment), deprecatedConfig || {});
+
+if (deprecatedConfig) {
+  this.log('DEPRECATION: intl configuration should be moved into config/ember-intl.js');
+  this.log('Run `ember g ember-intl-config` to create a default config');
+}
+
+if (addonConfig.defaultLocale) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.reduceTranslations" id="apidoc.element.ember-intl.index.reduceTranslations">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>reduceTranslations
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reduceTranslations(opts) {
+  if (!opts) { opts = {}; }
+  let addon = this;
+
+  return new TranslationReducer([this.translationTree], Object.assign({}, this.addonOptions, opts, {
+    verbose: !(this.app.options &amp;&amp; this.app.options.intl &amp;&amp; this.app.options.intl.silent),
+    log() {
+      return addon.log.apply(addon, arguments);
+    }
+  }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+  },
+
+  treeForApp(tree) {
+let trees = [tree];
+
+if (this.hasTranslationDir &amp;&amp; !this.addonOptions.publicOnly) {
+  trees.push(this.<span class="apidocCodeKeywordSpan">reduceTranslations</span>({
+    filename(key) {
+      return `${key}.js`;
+    },
+    wrapEntry(obj) {
+      return `export default ${stringify(obj)};`;
+    }
+  }));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.treeForApp" id="apidoc.element.ember-intl.index.treeForApp">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>treeForApp
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForApp(tree) {
+  let trees = [tree];
+
+  if (this.hasTranslationDir &amp;&amp; !this.addonOptions.publicOnly) {
+    trees.push(this.reduceTranslations({
+      filename(key) {
+        return `${key}.js`;
+      },
+      wrapEntry(obj) {
+        return `export default ${stringify(obj)};`;
+      }
+    }));
+  }
+
+  if (tree &amp;&amp; this.projectLocales.length) {
+    let cldrTree = extract(tree, {
+      locales: this.projectLocales,
+      relativeFields: true,
+      destDir: 'cldrs',
+      prelude: '/*jslint eqeq: true*/\n',
+      moduleType: 'es6'
+    });
+
+    trees.push(cldrTree);
+  }
+
+  return mergeTrees(trees, { overwrite: true });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-intl.index.treeForPublic" id="apidoc.element.ember-intl.index.treeForPublic">
+        function <span class="apidocSignatureSpan">ember-intl.index.</span>treeForPublic
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForPublic() {
+  let publicTree = this._super.treeForPublic.apply(this, arguments);
+  let trees = [];
+
+  if (publicTree) {
+    trees.push(publicTree);
+  }
+
+  if (!this.addonOptions.disablePolyfill) {
+    let appOptions = this.app.options || {};
+
+    trees.push(require('./lib/broccoli/intl-polyfill')({
+      locales: this.projectLocales,
+      destDir: appOptions.app &amp;&amp; appOptions.app.intl || 'assets/intl'
+    }));
+  }
+
+  if (this.hasTranslationDir &amp;&amp; this.addonOptions.publicOnly) {
+    trees.push(this.reduceTranslations());
+  }
+
+  return mergeTrees(trees, { overwrite: true });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
